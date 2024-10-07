@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import MyButton from './MyButton';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => {
+    const handleClick = () => {
+        alert('Button Clicked!');
+    };
+
+    return (
+        <div style={styles.container}>
+            <h1>Welcome to My React App!</h1>
+            <MyButton label="Click Me!" onClick={handleClick} />
+        </div>
+    );
+};
+
+const styles = {
+    container: {
+        textAlign: 'center',
+        padding: '20px',
+    },
+};
 
 export default App;
